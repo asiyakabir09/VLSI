@@ -1,0 +1,1 @@
+module gl2_full_sub_unit(a,b,bin,d,bout); input a,b,bin; output d,bout; wire axb,na,naxb,w1,w2; xor x1(axb,a,b); xor x2(d,axb,bin); not n1(na,a); and a1(w1,na,b); not n2(naxb,axb); and a2(w2,naxb,bin); or o1(bout,w1,w2); endmodule

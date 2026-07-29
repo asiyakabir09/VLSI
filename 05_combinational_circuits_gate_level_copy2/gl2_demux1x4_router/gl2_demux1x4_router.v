@@ -1,0 +1,1 @@
+module gl2_demux1x4_router(d,s1,s0,y0,y1,y2,y3); input d,s1,s0; output y0,y1,y2,y3; wire ns1,ns0; not n1(ns1,s1); not n2(ns0,s0); and a1(y0,d,ns1,ns0); and a2(y1,d,ns1,s0); and a3(y2,d,s1,ns0); and a4(y3,d,s1,s0); endmodule

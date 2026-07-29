@@ -1,0 +1,1 @@
+module gl2_full_add_unit(a,b,cin,s,cout); input a,b,cin; output s,cout; wire x,c1,c2,c3,t; xor x1(x,a,b); xor x2(s,x,cin); and a1(c1,a,b); and a2(c2,b,cin); and a3(c3,a,cin); or o1(t,c1,c2); or o2(cout,t,c3); endmodule

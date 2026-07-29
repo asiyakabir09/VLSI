@@ -1,0 +1,1 @@
+module gl2_mux4_selector(i0,i1,i2,i3,s1,s0,y); input i0,i1,i2,i3,s1,s0; output y; wire ns1,ns0,w0,w1,w2,w3,t0,t1; not n1(ns1,s1); not n2(ns0,s0); and a1(w0,i0,ns1,ns0); and a2(w1,i1,ns1,s0); and a3(w2,i2,s1,ns0); and a4(w3,i3,s1,s0); or o1(t0,w0,w1); or o2(t1,w2,w3); or o3(y,t0,t1); endmodule

@@ -1,0 +1,7 @@
+module gl2_compare1_unit_tb;
+    reg a,b; wire gt,eq,lt;
+    gl2_compare1_unit dut(a,b,gt,eq,lt);
+    initial begin $fsdbDumpfile("dump.fsdb"); $fsdbDumpvars(0, gl2_compare1_unit_tb); end
+    initial begin $monitor("time=%0t a=%b b=%b gt=%b eq=%b lt=%b",$time,a,b,gt,eq,lt);
+    a=0;b=0;#2; b=1;#2; a=1;b=0;#2; b=1;#2; $finish; end
+endmodule

@@ -1,0 +1,1 @@
+module gl2_decoder2_to_4_unit(a1,a0,y); input a1,a0; output [3:0] y; wire na1,na0; not n1(na1,a1); not n2(na0,a0); and a1x(y[0],na1,na0); and a2x(y[1],na1,a0); and a3x(y[2],a1,na0); and a4x(y[3],a1,a0); endmodule
