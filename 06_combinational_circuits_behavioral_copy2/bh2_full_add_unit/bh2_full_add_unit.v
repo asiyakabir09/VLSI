@@ -1,0 +1,1 @@
+module bh2_full_add_unit(a,b,cin,s,cout); input a,b,cin; output reg s,cout; always @(*) begin {cout,s}=a+b+cin; end endmodule

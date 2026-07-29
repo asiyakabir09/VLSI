@@ -1,0 +1,1 @@
+module bh2_encoder4_to_2_unit(i0,i1,i2,i3,y1,y0); input i0,i1,i2,i3; output reg y1,y0; always @(*) begin if(i3){y1,y0}=2'b11; else if(i2){y1,y0}=2'b10; else if(i1){y1,y0}=2'b01; else {y1,y0}=2'b00; end endmodule
